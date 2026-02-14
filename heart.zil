@@ -101,7 +101,7 @@ excellent cup of tea you had recently help you to survive." CR CR>)>)>>
 		       <TELL
 "\"Unless you're here to show me some clear sign of your intelligence, please
 leave me alone. I'm a very busy door.\"" CR>
-		       <FUCKING-CLEAR>)>)
+		       <RESET-PARSER>)>)
 	       (<AND <FSET? ,SCREENING-DOOR ,OPENBIT>
 		     <VERB? SHOW GIVE KNOCK OPEN>>
 		<TELL "You already induced the door to open." CR>)
@@ -222,11 +222,11 @@ for a job like this?\"" CR>)
 			     (T
 			      <TELL "\"Please don't feel you have
 to take any notice of me. I'm just a menial robot.\"" CR>
-			      <FUCKING-CLEAR>)>) 
+			      <RESET-PARSER>)>)
 		      (T
 		       <TELL
 "\"I think you ought to know I'm feeling very depressed.\"" CR>
-		       <FUCKING-CLEAR>)>)
+		       <RESET-PARSER>)>)
 	       (<AND <VERB? ASK-ABOUT>
 		     <PRSI? ,OBJECT-OF-GAME>>
 		<TELL
@@ -564,7 +564,7 @@ toward the sauna, sipping loudly." CR>)>>
 		       <RTRUE>)
 		      (T
 		       <TELL "The " D ,NUTRIMAT " ignores you." CR>
-		       <FUCKING-CLEAR>)>)
+		       <RESET-PARSER>)>)
 	       (<VERB? EXAMINE>
 		<TELL
 "The " D ,NUTRIMAT " has a " D ,PAD ", a dispensing slot, and a
@@ -1080,7 +1080,7 @@ your teeth lately?\"" CR>)
 		       <TELL
 "Eddie sighs deeply. \"I can't talk right now. Do you know how difficult it is
 to pilot a ship as complicated as this one?\"" CR>
-		       <FUCKING-CLEAR>)>)
+		       <RESET-PARSER>)>)
 	       (<VERB? LAMP-OFF>
 		<TELL "You don't know how (fortunately)." CR>)
 	       (<AND <VERB? ASK-ABOUT>
@@ -1147,7 +1147,7 @@ anywhere in life? But don't read unless there's enough light.\"" CR>)>>
 		       <TELL ,ASK-ABOUT-OBJECT CR>)
 		      (T
 		       <TELL "\"Shut up, Earthman.\"" CR>
-		       <FUCKING-CLEAR>)>)
+		       <RESET-PARSER>)>)
 	       (<EQUAL? ,IDENTITY-FLAG ,TRILLIAN>
 		<COND (<AND <PRSI? ,PHIL>
 			    <VERB? SHOW GIVE>>
@@ -1176,7 +1176,7 @@ anywhere in life? But don't read unless there's enough light.\"" CR>)>>
 			      <MOVE ,CAGE ,LIVING-ROOM>
 			      <TELL D ,LIVING-ROOM>)>
 		       <TELL "." CR>
-		       <FUCKING-CLEAR>)
+		       <RESET-PARSER>)
 		      (<VERB? EXAMINE>
 		       <TELL
 "He is very attractive, if a little weird, and has a slight other-worldly
@@ -1266,11 +1266,11 @@ speed that you black out almost immediately.">
 		      (<EQUAL? ,IDENTITY-FLAG ,ZAPHOD>
 		       <TELL "\"Shut up, you jerk!\" hisses " D ,TRILLIAN
 ". \"Just get on with the plan.\"" CR>
-		       <FUCKING-CLEAR>)
+		       <RESET-PARSER>)
 		      (T
 		       <TELL
 D ,TRILLIAN " smiles disinterestedly at you and looks away." CR>
-		       <FUCKING-CLEAR>)>)
+		       <RESET-PARSER>)>)
 	       (<AND <VERB? SHOOT>
 		     <PRSI? ,BLASTER>>
 		<TELL

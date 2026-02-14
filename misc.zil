@@ -250,7 +250,7 @@ it would be if you could see it which you can't." CR CR>
 			  <SETG PRSO <>>)
 			 (<NOT ,LIT>
 			  <TELL ,TOO-DARK CR>
-			  <FUCKING-CLEAR>)
+			  <RESET-PARSER>)
 			 (T
 			  <TELL "There isn't anything to ">
 			  <SET TMP <GET ,P-ITBL ,P-VERBN>>
@@ -263,7 +263,7 @@ it would be if you could see it which you can't." CR CR>
 					     <GETB .TMP 3>>)>
 			  <TELL "!" CR>
 			  <SET V <>>
-			  <FUCKING-CLEAR>)>)
+			  <RESET-PARSER>)>)
 		  (T
 		   <SETG P-NOT-HERE 0>
 		   <SETG P-MULT <>>

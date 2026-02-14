@@ -258,15 +258,15 @@ no recollection of eating ">
 			      <RTRUE>)>)
 		      (T
 		       <TELL "The Beast just roars at you." CR>
-		       <FUCKING-CLEAR>)>)
+		       <RESET-PARSER>)>)
 	       (<AND <VERB? TELL HELLO ASK-ABOUT ASK-FOR TELL-ABOUT>
 		     <PRSO? ,BEAST>>
 		<COND (<FSET? ,BEAST ,MUNGEDBIT>
 		       <TELL "The Beast is sleeping!" CR>
-		       <FUCKING-CLEAR>)
+		       <RESET-PARSER>)
 		      (<FSET? ,TOWEL ,WORNBIT>
 		       <SAID-WITH-TOWEL>
-		       <FUCKING-CLEAR>)>)
+		       <RESET-PARSER>)>)
 	       (<AND <VERB? TELL-TIME>
 		     <PRSI? ,YOUR-NAME>>
 		<PERFORM ,V?SAY-NAME ,YOUR-NAME>
@@ -559,7 +559,7 @@ the worst one that ever died. That is an even worse insult in the G'Gugvunt
 tongue than \"">
 		<RESTORE-INPUT ,FIRST-BUFFER>
 		<TELL "\" is in the Vl'Hurg tongue." CR>
-		<FUCKING-CLEAR>)
+		<RESET-PARSER>)
 	       (<VERB? EXAMINE>
 		<TELL "The " D ,VLHURG " looks typically Vl'Hurgish." CR>)
 	       (<VERB? LISTEN>
@@ -609,7 +609,7 @@ The two creatures turn and stare at you." CR>)>)>>
 <ROUTINE GGUGVUNT-F ()
 	 <COND (<VERB? TELL>
 		<PERFORM ,V?TELL ,VLHURG>
-		<FUCKING-CLEAR>)
+		<RESET-PARSER>)
 	       (<VERB? EXAMINE>
 		<TELL
 "The " D ,GGUGVUNT " is looking typically G'Gugvuntish." CR>)
@@ -956,7 +956,7 @@ as cover you maneuver away.")
 		      (T
 		       <SETG WINNER ,PROTAGONIST>
 		       <PERFORM ,V?HELLO ,HOSTESS>
-		       <FUCKING-CLEAR>)>)
+		       <RESET-PARSER>)>)
 	       (<AND <VERB? HELLO ASK-ABOUT TELL-ABOUT>
 		     <PRSO? ,HOSTESS>>
 		<TELL
@@ -1399,7 +1399,7 @@ and points a blaster at your left head. Guards rush up, " D ,RIFLES "s poised
 to shoot. \"Stay back!\" shouts " D ,TRILLIAN ". \"One more step and the"
 ,PRESIDENT " is fried meat!\" The guards seem unsure, and look at you for
 instructions.">)>
-		<FUCKING-CLEAR>
+		<RESET-PARSER>
 		<CRLF>)>>
 
 <ROUTINE CROWD-PSEUDO ()
@@ -1415,7 +1415,7 @@ instructions.">)>
 "You'd be crushed by the enthusiasm of your admirers." CR>)
 	       (<VERB? TELL WAVE-AT>
 		<TELL ,CROWD-CHEERS CR>
-		<FUCKING-CLEAR>
+		<RESET-PARSER>
 		<RTRUE>)>>
 
 <OBJECT PLATFORM

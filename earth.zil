@@ -660,7 +660,7 @@ As the ambulance reaches the mortuary">
 	 <COND (<VERB? TELL HELLO>
 		<TELL "The " D ,BULLDOZER-DRIVER
 ", perusing a booklet of union rules, ignores you." CR>
-		<FUCKING-CLEAR>)>>
+		<RESET-PARSER>)>>
 
 <OBJECT BULLDOZER
 	(IN LOCAL-GLOBALS)
@@ -797,7 +797,7 @@ the way.">)>)>
 "Prosser is too preoccupied with recent events to give your remarks much
 consideration. He is running off and saying a number of things about his
 mother in a high voice." CR>
-		       <FUCKING-CLEAR>)
+		       <RESET-PARSER>)
 		      (<AND <VERB? TELL-ABOUT>
 			    <PRSO? ,ME>>
 		       <SETG WINNER ,PROTAGONIST>
@@ -858,7 +858,7 @@ You rapidly conclude the business. Prosser lies in the mud. Arthur, bewildered,
 nevertheless stands up and appears ready to follow you to the Pub." CR>)
 			     (T
 			      <STAND-ASIDE>
-			      <FUCKING-CLEAR>)>)
+			      <RESET-PARSER>)>)
 			    (<AND <VERB? WHAT-ABOUT>
 				  <PRSO? ,HOUSE ,HOME>
 				  ,HOUSE-DEMOLISHED>
@@ -871,14 +871,14 @@ reassurance, that you will probably be rehoused within a couple of years." CR>)
 			     <V-PROTEST>)
 			    (T
 			     <STAND-ASIDE>
-			     <FUCKING-CLEAR>)>)
+			     <RESET-PARSER>)>)
 	       (<AND <NOT ,GONE-AROUND>
 		     <EQUAL? ,IDENTITY-FLAG ,FORD>
 		     <VERB? TELL HELLO ASK-FOR ASK-ABOUT TELL-ABOUT>
 		     <PRSO? ,PROSSER>
 		     <NOT <IN? ,FLEET ,HERE>>>
 		<TELL "Prosser can't hear you from here." CR>
-		<FUCKING-CLEAR>)
+		<RESET-PARSER>)
 	       (<VERB? GIVE SHOW>
 		<COND (<PRSO? ,THING>
 		       <TELL
@@ -1001,12 +1001,12 @@ wearing it only because I think " D ,DIGITAL-WATCH "es are neat.\"" CR>)>>
 	       (<EQUAL? ,FORD ,WINNER>
 		<COND (<IN? ,FLEET ,HERE>
 		       <TELL ,ABOVE-NOISE CR>
-		       <FUCKING-CLEAR>)
+		       <RESET-PARSER>)
 		      (<OR <PRSI? ,HOUSE>
 			   <PRSO? ,HOUSE>>
 		       <TELL
 "\"It's not a house, it's a home.\" (Footnote 2)" CR>
-		       <FUCKING-CLEAR>)
+		       <RESET-PARSER>)
 		      (<AND <VERB? TELL-ABOUT>
 			    <PRSO? ,ME>>
 		       <SETG WINNER ,PROTAGONIST>
@@ -1053,12 +1053,12 @@ wearing it only because I think " D ,DIGITAL-WATCH "es are neat.\"" CR>)>>
 		       <ENABLE <QUEUE I-FORD 2>>)
 		      (T
 		       <TELL "Ford seems deep in thought." CR>
-		       <FUCKING-CLEAR>)>)
+		       <RESET-PARSER>)>)
 	       (<AND <VERB? TELL TELL-ABOUT HELLO ASK-FOR ASK-ABOUT>
 		     <PRSO? ,FORD>
 		     ,FORD-SLEEPING>
 		<TELL "Ford is sleeping!" CR>
-		<FUCKING-CLEAR>)
+		<RESET-PARSER>)
 	       (<AND <VERB? GIVE>
 		     <PRSI? ,FORD>
 		     ,FORD-SLEEPING>
@@ -2275,7 +2275,7 @@ like. That is, knocked about a bit, painted yellow, and flying." CR>)>>
 "Arthur seems to be waiting to follow your lead." CR>)>)
 		      (T
 		       <TELL "Arthur looks too confused to respond." CR>)>
-		<FUCKING-CLEAR>)
+		<RESET-PARSER>)
 	       (<AND <VERB? HELLO TELL ASK-FOR ASK-ABOUT TELL-ABOUT>
 		     <EQUAL? ,IDENTITY-FLAG ,TRILLIAN>
 		     <PRSO? ,ARTHUR>>
@@ -2286,7 +2286,7 @@ like. That is, knocked about a bit, painted yellow, and flying." CR>)>>
 "You approach Arthur. He seems to find your tone a little cool, smiles
 unhappily, and wanders to the other end of the room." CR>)>
 		<ENABLE <QUEUE I-ARTHUR 2>>
-		<FUCKING-CLEAR>)
+		<RESET-PARSER>)
 	       (<AND <VERB? TELL-ABOUT ASK-ABOUT ASK-FOR>
 		     <PRSO? ,ARTHUR>
 		     <EQUAL? ,IDENTITY-FLAG ,TRILLIAN>>
