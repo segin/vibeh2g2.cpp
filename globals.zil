@@ -123,7 +123,7 @@
 		       <TELL " any">)>
 		<NOT-HERE-PRINT .PRSO?>
 		<TELL " here!\"" CR>)>
-	 <RESET-PARSER>>
+	 <FUCKING-CLEAR>>
 
 <ROUTINE FIND-NOT-HERE (TBL PRSO? "AUX" M-F OBJ)
 ;"Special-case code goes here. <MOBY-FIND .TBL> returns # of matches. If 1,
@@ -478,7 +478,7 @@ varying sizes. The " D ,THIRD-PLANET " catches your attention.">
 	 <COND (<VERB? TELL>
 		<TELL
 "Talking to yourself is a sign of impending mental collapse." CR>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (<VERB? LISTEN>
 		<TELL "Yes?" CR>)
 	       (<VERB? ALARM>
@@ -660,7 +660,7 @@ can shoot without rifles." CR>)>)
 			      <TELL
 "You have failed to issue one of the small set of commands that the
 guards' military intelligences are trained to understand." CR>
-			      <RESET-PARSER>)>)
+			      <FUCKING-CLEAR>)>)
 		      (T
 		       <COND (<HELD? ,BABEL-FISH ,PROTAGONIST>
 			      <TELL "\"Resistance is useless!\"" CR>)
@@ -668,7 +668,7 @@ guards' military intelligences are trained to understand." CR>
 			      <TELL "\"I">
 			      <PRODUCE-GIBBERISH 1>
 			      <CRLF>)>
-		       <RESET-PARSER>)>)
+		       <FUCKING-CLEAR>)>)
 	       (<AND <EQUAL? ,HERE ,CAPTAINS-QUARTERS>
 		     <VERB? TELL HELLO THANK>>
 		<PERFORM ,V?TELL ,VOGON-CAPTAIN>
@@ -1038,16 +1038,16 @@ moving in the dark." CR>)
 		       <TELL "Dark" CR>)>
 		<COND (<PROB 25>
 		       <DARK-ONE>
-		       <RESET-PARSER>)
+		       <FUCKING-CLEAR>)
 		      (<PROB 33>
 		       <DARK-TWO>
-		       <RESET-PARSER>)
+		       <FUCKING-CLEAR>)
 		      (<PROB 50>
 		       <DARK-THREE>
-		       <RESET-PARSER>)
+		       <FUCKING-CLEAR>)
 		      (T
 		       <DARK-FOUR>
-		       <RESET-PARSER>)>
+		       <FUCKING-CLEAR>)>
 		<COND (<EQUAL? ,DARK-COUNTER 18>
 		       <TELL CR
 "When will you come to your senses and solve this puzzle?" CR>)
@@ -1632,7 +1632,7 @@ by trained " ,SCC " Field Engineers." CR>)>>
 		      (T
 		       <TELL
 "\"Can't chat, pal, I'm attending to an important repair call.\"" CR>
-		       <RESET-PARSER>)>)
+		       <FUCKING-CLEAR>)>)
 	       (<AND <VERB? GIVE SHOW>
 		     <PRSO? ,THUMB>>
 		<COND (<FSET? ,THUMB ,MUNGEDBIT>
@@ -1986,7 +1986,7 @@ seconds is almost infinitely improbable.">
 	       (T
 		<PRSI-PRINT>)>
 	 <TELL " here." CR>
-	 <RESET-PARSER>>
+	 <FUCKING-CLEAR>>
 
 <ROUTINE TELL-ME-HOW ()
 	 <TELL "You must tell me how to do that to">

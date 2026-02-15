@@ -344,17 +344,17 @@ AGAIN after your previous action." CR>
 	 <COND (<AND ,AWAITING-REPLY
 		     <EQUAL? <GET ,P-LEXV ,P-CONT> ,W?YES>>
 		<V-YES>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (<AND ,AWAITING-REPLY
 		     <EQUAL? <GET ,P-LEXV ,P-CONT> ,W?NO>>
 		<V-NO>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (<IN? ,BEAST ,HERE>
 		<V-SAY>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (T
 		<TELL "Nobody is awaiting your answer." CR>
-	        <RESET-PARSER>)>>
+	        <FUCKING-CLEAR>)>>
 
 <ROUTINE V-APPLAUD ()
 	 <COND (<RUNNING? ,I-CAPTAIN>
@@ -1420,6 +1420,9 @@ front of it!\"" CR>)
 <ROUTINE V-PUT-UNDER ()
          <V-DIG>>
 
+<ROUTINE V-RAPE ()
+	 <V-KISS>>
+
 <ROUTINE V-RAISE ()
 	 <HACK-HACK "Playing in this way with">>
 
@@ -1491,7 +1494,7 @@ front of it!\"" CR>)
 	 <TELL "It is hardly likely that">
 	 <ARTICLE ,PRSO T>
 	 <TELL " is interested." CR>
-	 <RESET-PARSER>>
+	 <FUCKING-CLEAR>>
 
 <ROUTINE V-RUB ()
 	 <COND (<LOC-CLOSED>
@@ -1508,15 +1511,15 @@ front of it!\"" CR>)
 	 <COND (<AND ,AWAITING-REPLY
 		     <EQUAL? <GET ,P-LEXV ,P-CONT> ,W?YES>>
 		<V-YES>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (<AND ,AWAITING-REPLY
 		     <EQUAL? <GET ,P-LEXV ,P-CONT> ,W?NO>>
 		<V-NO>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (<AND <IN? ,BEAST ,HERE>
 		     <FSET? ,TOWEL ,WORNBIT>>
 		<SAID-WITH-TOWEL>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (<AND <IN? ,BEAST ,HERE>
 		     <NOT ,P-CONT>>
 		<PERFORM ,V?TELL ,BEAST>
@@ -1524,18 +1527,18 @@ front of it!\"" CR>)
 	       (<AND <IN? ,BEAST ,HERE>
 		     <SAID-YOUR-NAME?>>
 		<PERFORM ,V?SAY-NAME ,YOUR-NAME>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (<IN? ,BEAST ,HERE>
 		<PERFORM ,V?SAY-NAME ,BEAST-NAME>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (<SET V <FIND-IN ,HERE ,ACTORBIT>>
 		<TELL "You must address">
 		<ARTICLE .V T>
 		<TELL " directly." CR>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (T
 		<PERFORM ,V?TELL ,ME>
-		<RESET-PARSER>)>>
+		<FUCKING-CLEAR>)>>
 
 <ROUTINE SAID-YOUR-NAME? ("AUX" OFFS LEN WRD)
 	 <SET OFFS ,P-CONT>
@@ -1922,7 +1925,7 @@ interesting wall." CR>)
 		<TELL "You can't talk to">
 		<ARTICLE ,PRSO>
 		<TELL "!" CR>
-		<RESET-PARSER>)>>
+		<FUCKING-CLEAR>)>>
 
 <ROUTINE V-TELL-ABOUT ()
 	 <COND (<PRSO? ,ME>
@@ -2028,7 +2031,7 @@ interesting wall." CR>)
 <ROUTINE V-TYPE ()
 	 <COND (<NOT <EQUAL? ,HERE ,HOLD>>
 		<TELL "There's no " D ,KEYBOARD " in sight." CR>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (<AND <NOT ,POEM-ENJOYED>
 		     ,P-CONT>
 		<PERFORM ,V?MUNG ,GLASS-CASE>
@@ -2856,7 +2859,7 @@ long description (fdesc or ldesc), otherwise will print short."
 	 <SETG P-WALK-DIR .DIR>
 	 <PERFORM ,V?WALK .DIR>>
 
-<ROUTINE RESET-PARSER ()
+<ROUTINE FUCKING-CLEAR ()
 	 <SETG P-CONT <>>
 	 <SETG QUOTE-FLAG <>>
 	 <RFATAL>>

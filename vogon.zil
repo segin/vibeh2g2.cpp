@@ -469,7 +469,7 @@ Several cleaning robots fly in and wipe you neatly off the walls.">
 <ROUTINE GLASS-CASE-OPENS () ;"see V-TYPE"
 	 <COND (<FSET? ,GLASS-CASE ,OPENBIT>
 		<TELL "Nothing happens." CR>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (T
 		<FSET ,GLASS-CASE ,OPENBIT>
 		<TELL "The " D ,GLASS-CASE " opens." CR>
@@ -477,7 +477,7 @@ Several cleaning robots fly in and wipe you neatly off the walls.">
 		<COND (<NOT ,GLASS-CASE-SCORE>
 		       <SETG GLASS-CASE-SCORE T>
 		       <SETG SCORE <+ ,SCORE 25>>)>
-		<RESET-PARSER>)>>
+		<FUCKING-CLEAR>)>>
 
 <OBJECT KEYBOARD
 	(IN HOLD)
@@ -634,7 +634,7 @@ favourite poetry.")
 		       <TELL " and says, \"A">
 		       <PRODUCE-GIBBERISH 2>
 		       <CRLF>)>
-		<RESET-PARSER>)
+		<FUCKING-CLEAR>)
 	       (<AND <IN? ,POETRY ,HERE>
 		     <VERB? BLOCK>>
 		<PERFORM ,V?LISTEN ,POETRY>
