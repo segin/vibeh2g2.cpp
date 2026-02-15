@@ -222,7 +222,7 @@ for a job like this?\"" CR>)
 			     (T
 			      <TELL "\"Please don't feel you have
 to take any notice of me. I'm just a menial robot.\"" CR>
-			      <FUCKING-CLEAR>)>) 
+			      <FUCKING-CLEAR>)>)
 		      (T
 		       <TELL
 "\"I think you ought to know I'm feeling very depressed.\"" CR>

@@ -832,11 +832,7 @@ guards' military intelligences are trained to understand." CR>
 			      (<PROB ,FLEET-PROB>
 			       <SETG FLEET-PROB 10>
 			       <SETG DARK-FLAG ,WAR-CHAMBER>
-			       <SETG CURRENT-EXIT 7>)
-			      (<PROB ,WHALE-PROB> ;"this should always be 0"
-			       <TELL "Bug #60" CR>
-			       <SETG DARK-FLAG ,INSIDE-WHALE>
-			       <SETG CURRENT-EXIT 6>)>
+			       <SETG CURRENT-EXIT 7>)>
 			<COND (,DARK-FLAG
 			       <RETURN>)>>
 		<RFALSE>)
